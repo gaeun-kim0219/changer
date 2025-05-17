@@ -1,0 +1,53 @@
+  <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>단위 변환기 & 계산기</title>
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen px-4">
+
+  <div class="bg-white rounded-3xl shadow-xl w-full max-w-xl p-6 space-y-8">
+    <h1 class="text-2xl md:text-3xl font-bold text-indigo-600 text-center">🔬 실시간 단위 변환기 & 계산기</h1>
+
+    <!-- 단위 변환기 -->
+    <section class="space-y-4">
+      <h2 class="text-lg font-semibold text-gray-700">단위 변환기</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <input type="number" id="unitInput" class="input" placeholder="값 입력" />
+        <select id="fromUnit" class="input">
+          <option value="m">미터 (m)</option>
+          <option value="km">킬로미터 (km)</option>
+          <option value="cm">센티미터 (cm)</option>
+          <option value="mm">밀리미터 (mm)</option>
+        </select>
+        <select id="toUnit" class="input">
+          <option value="km">킬로미터 (km)</option>
+          <option value="m">미터 (m)</option>
+          <option value="cm">센티미터 (cm)</option>
+          <option value="mm">밀리미터 (mm)</option>
+        </select>
+      </div>
+      <button onclick="convertUnit()" class="btn-indigo">🔁 변환하기</button>
+    </section>
+
+    <hr class="border-gray-200" />
+
+    <!-- 계산기 -->
+    <section class="space-y-4">
+      <h2 class="text-lg font-semibold text-gray-700">수학 계산기</h2>
+      <input type="text" id="expression" class="input" placeholder="예: 2+3*5/2" />
+      <button onclick="calculate()" class="btn-indigo">🧮 계산하기</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.input {
+  @apply w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition;
+}
+
+.btn-indigo {
+  @apply w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 rounded-xl transition;
+}
+
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+.swal2-popup {
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif !important;
+}
+
